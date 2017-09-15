@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ExRate.c">
+    <ClCompile Include="TripBudget.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

@@ -4,13 +4,10 @@ int main(void)
 {
 	double usd;
 	double usdTokrw;
-
 	double eur;
 	double eurTokrw;
-
 	double jpy;
 	double jpyTokrw;
-
 	double cny;
 	double cnyTokrw;
 
