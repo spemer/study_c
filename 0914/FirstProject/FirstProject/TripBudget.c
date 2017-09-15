@@ -4,7 +4,9 @@ int main(void)
 {
 	int airPrice;
 	int dayPrice;
-	int dayMoneyNeed;
+	int TotalDayPrice;
+	int dayMoney;
+	int TotalDayMoney;
 	int days;
 	int sum;
 
@@ -16,16 +18,19 @@ int main(void)
 
 	printf("호텔 1박 가격: ");
 	scanf_s("%d", &dayPrice);
-	dayPrice = dayPrice * days;
+	TotalDayPrice = dayPrice * days;
 
 	printf("하루에 필요한 용돈: ");
-	scanf_s("%d", &dayMoneyNeed);
-	dayMoneyNeed = dayMoneyNeed * days;
+	scanf_s("%d", &dayMoney);
+	TotalDayMoney = dayMoney * days;
 
-	sum = airPrice + dayPrice + dayMoneyNeed;
+	sum = airPrice + TotalDayPrice + TotalDayMoney;
 
 	printf("\n==========\n");
-	printf("총 여행 비용: %d", sum);
+	printf("항공권: %d원\n", airPrice);
+	printf("호텔 가격: 1박 %d원 * %d일 => %d원\n", dayPrice, days, TotalDayPrice);
+	printf("필요 용돈: 1일 %d원 * %d일 => %d원\n", dayMoney, days, TotalDayMoney);
+	printf("총 여행 비용: %d원", sum);
 	printf("\n==========\n");
 
 
