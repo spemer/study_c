@@ -1,6 +1,25 @@
 #include<stdio.h>
 
+void GradeCalc(void);
+
 int main(void)
+{
+	int Calc;
+
+	do
+	{
+		GradeCalc();
+
+		printf("\nAgain?\nYes: 1, No: 0 : ");
+		scanf_s("%d", &Calc);
+		printf("\n-----\n");
+
+	} while (Calc == 1);
+	
+	return 0;
+}
+
+void GradeCalc(void)
 {
 	char StudentName[100];
 	int StudentNumb;
@@ -56,33 +75,51 @@ int main(void)
 	Total = Kor + Eng + Math;
 	Aver = Total / 3;
 
+	switch (Aver / 10)
+	{
+	case 10:
+	case 9:
+		Grade = 'A';
+		break;
+	case 8:
+		Grade = 'B';
+		break;
+	case 7:
+		Grade = 'C';
+		break;
+	case 6:
+		Grade = 'D';
+		break;
+	default:
+		Grade = 'F';
+	}
+
+	/*
 	if (Aver <= 100 && Aver > 90)
 	{
-		Grade = 'A';
+	Grade = 'A';
 	}
 	else if (Aver < 90 && Aver >= 80)
 	{
-		Grade = 'B';
+	Grade = 'B';
 	}
 	else if (Aver < 80 && Aver >= 70)
 	{
-		Grade = 'C';
+	Grade = 'C';
 	}
 	else if (Aver < 70 && Aver >= 60)
 	{
-		Grade = 'D';
+	Grade = 'D';
 	}
 	else if (Aver < 60)
 	{
-		Grade = 'F';
+	Grade = 'F';
 	}
+	*/
 
 	printf("\n=====\n");
 	printf("Name: %s\n", StudentName);
 	printf("Average: %d\n", Aver);
 	printf("Grade: %c\n", Grade);
 	printf("=====\n");
-	
-	getch();
-	return 0;
 }
