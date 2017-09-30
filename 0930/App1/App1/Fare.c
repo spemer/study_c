@@ -54,6 +54,7 @@ void Fare(void)
 			Fare[i] = FARE_ELDER;
 			ElderNumb += 1;
 		}
+
 		TotalFare = TotalFare + Fare[i];
 	}
 
