@@ -7,13 +7,10 @@
 #define FARE_YOUNG 1200
 #define FARE_ADULT 1400
 #define FARE_ELDER 1000
-
 void Fare(void);
-
 int main(void)
 {
 	int a;
-
 	do
 	{
 		Fare();
@@ -23,17 +20,14 @@ int main(void)
 
 	return 0;
 }
-
 void Fare(void)
 {
 	int i, PsngrNumb, PsngrAge[100], PsngrFare[100];
 	int YoungNumb = 0, AdultNumb = 0, ElderNumb = 0, Total = 0, Change = 0;
-
 	do
 	{
 		printf("Number of Passenger: ");
 		scanf("%d", &PsngrNumb);
-
 		if (PsngrNumb > MAX_PSNGR)
 		{
 			printf("\nCannot take over %d passenger\n", MAX_PSNGR);
@@ -68,7 +62,6 @@ void Fare(void)
 			printf("Adult: %d * %d = %d\n", AdultNumb, FARE_ADULT, AdultNumb * FARE_ADULT);
 			printf("Elder: %d * %d = %d\n", ElderNumb, FARE_ELDER, ElderNumb * FARE_ELDER);
 			printf("Total Price: %d\n", Total);
-
 			Change = USER_MONEY - Total;
 			printf("\nYou have %d\n", USER_MONEY);
 			printf("Change: %d - %d = %d\n", USER_MONEY, Total, Change);
