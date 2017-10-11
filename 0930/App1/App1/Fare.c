@@ -7,43 +7,57 @@
 #define FARE_YOUNG 1200
 #define FARE_ADULT 1400
 #define FARE_ELDER 1000
+
 void Fare(void);
+
 int main(void)
 {
 	int a;
-	do {
+
+	do
+	{
 		Fare();
 		printf("\n\nAgain?\nYes: 1, No: 0\n");
 		scanf("%d", &a);
 	} while (a == 1);
+
 	return 0;
 }
+
 void Fare(void)
 {
 	int i, PsngrNumb, PsngrAge[100], PsngrFare[100];
 	int YoungNumb = 0, AdultNumb = 0, ElderNumb = 0, Total = 0, Change = 0;
-	do {
+
+	do
+	{
 		printf("Number of Passenger: ");
 		scanf("%d", &PsngrNumb);
 
-		if (PsngrNumb > MAX_PSNGR) {
+		if (PsngrNumb > MAX_PSNGR)
+		{
 			printf("\nCannot take over %d passenger\n", MAX_PSNGR);
 		}
-		else if (PsngrNumb <= MAX_PSNGR){
+		else if (PsngrNumb <= MAX_PSNGR)
+		{
 			printf("\n");
-			for (i = 0; i < PsngrNumb; i++) {
+			for (i = 0; i < PsngrNumb; i++)
+			{
 				printf("Age of Passenger %d: ", i + 1);
 				scanf("%d", &PsngrAge[i]);
 
-				if (PsngrAge[i] <= AGE_YOUNG) {
+				if (PsngrAge[i] <= AGE_YOUNG)
+				{
 					PsngrFare[i] = FARE_YOUNG;
 					YoungNumb += 1;
 				}
-				else if (PsngrAge[i] > AGE_YOUNG && PsngrAge[i] < AGE_ELDER) {
+				else if (PsngrAge[i] > AGE_YOUNG && PsngrAge[i] < AGE_ELDER)
+				{
 					PsngrFare[i] = FARE_ADULT;
 					AdultNumb += 1;
 				}
-				else if (PsngrAge[i] >= AGE_ELDER) {
+				else if (PsngrAge[i] >= AGE_ELDER)
+				{
 					PsngrFare[i] = FARE_ELDER;
 					ElderNumb += 1;
 				}
