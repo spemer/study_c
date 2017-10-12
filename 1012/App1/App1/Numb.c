@@ -2,6 +2,7 @@
 #include <stdio.h>
 #pragma warning (disable:4996)
 #define MULT_LMIT 5
+#define
 void Numb(void);
 int main(void)
 {
