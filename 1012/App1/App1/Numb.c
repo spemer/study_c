@@ -2,8 +2,7 @@
 #include <stdio.h>
 #pragma warning (disable:4996)
 #define MULT_LMIT 5
-#define
-void Numb(void);
+void Numb();
 int main(void)
 {
 	int ask;
@@ -15,7 +14,7 @@ int main(void)
 	} while (ask == 1);
 	return 0;
 }
-void Numb(void)
+void Numb()
 {
 	int getNumb, i, total = 0, avg = 0;
 	int numbToCalc[100];
