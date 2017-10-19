@@ -3,23 +3,19 @@
 #pragma warning (disable: 4996)
 int calc_sum(int left, int right)
 {
-	int result = left + right;
-	return result;
+	return left + right;
 }
 int calc_minus(int left, int right)
 {
-	int result = left - right;
-	return result;
+	return left - right;
 }
 int calc_multi(int left, int right)
 {
-	int result = left * right;
-	return result;
+	return left * right;
 }
 float calc_divide(int left, int right)
 {
-	float result = (float)left / (float)right;
-	return result;
+	return (float)left / (float)right;
 }
 void Calc()
 {
@@ -37,8 +33,7 @@ void Calc()
 		{
 			if (op == '/' && right != 0)
 			{
-				float result_print = calc_divide(left, right);
-				printf("%d %c %d = %0.2f\n", left, op, right, result_print);
+				printf("%d %c %d = %0.2f\n", left, op, right, calc_divide(left, right));
 			}
 			else
 			{
