@@ -65,6 +65,7 @@ int main()
 		calc();
 		printf("\nAgain? No: 0, Yes: 1\n");
 		scanf("%d", &ask);
+		puts("");
 	} while (ask == 1);
 	return 0;
 }
