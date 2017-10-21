@@ -3,23 +3,19 @@
 #pragma warning (disable: 4996)
 int calc_sum(int left, int right)
 {
-	int result;
-	return result = left + right;
+	return left + right;
 }
 int calc_minus(int left, int right)
 {
-	int result;
-	return result = left - right;
+	return left - right;
 }
 int calc_multi(int left, int right)
 {
-	int result;
-	return result = left * right;
+	return left * right;
 }
 float calc_divide(int left, int right)
 {
-	float result;
-	return result = (float)left / (float)right;
+	return (float)left / (float)right;
 }
 void calc()
 {
@@ -46,15 +42,19 @@ void calc()
 	}
 	else if (op == '/')
 	{
-		if (left == 0 || right == 0)
+		do
 		{
-			printf("You can't input 0 while divide");
-		}
-		else
-		{
-			calc_divide(left, right);
-			printf("\n%d %c %d = %0.2f\n", left, op, right, calc_divide(left, right));
-		}
+			if (left == 0 || right == 0)
+			{
+				printf("Cannot use 0 while divide");
+				break;
+			}
+			else
+			{
+				calc_divide(left, right);
+				printf("\n%d %c %d = %0.2f\n", left, op, right, calc_divide(left, right));
+			}
+		} while (left == 0 || right == 0);
 	}
 }
 int main()
