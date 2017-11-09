@@ -18,15 +18,10 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Colors.c" />
-    <ClCompile Include="Exchange.c" />
-    <ClCompile Include="TwoNumbs.c" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{A3EC617A-E453-4950-9636-F2D6352D5E2D}</ProjectGuid>
-    <RootNamespace>Assignment</RootNamespace>
+    <ProjectGuid>{DB5B390C-6C2B-45B0-BFCA-DC4976013E18}</ProjectGuid>
+    <RootNamespace>My1109</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -115,6 +110,9 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="RSP.c" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
