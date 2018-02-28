@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="NBB2.c">
+    <ClCompile Include="nbbEx.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
