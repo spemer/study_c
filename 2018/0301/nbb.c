@@ -1,11 +1,13 @@
 /*NineBirdBody.c*/
 #include<stdio.h>
+
 typedef struct student
 {
 	int number;
 	char name[10];
 	double grade;
 } STUDENT;
+
 int main(void)
 {
 	STUDENT s1;
